@@ -7,10 +7,12 @@ export const MessageForm = () => {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => console.log(data);
 
-  <form onSubmit={handleSubmit(onSubmit)}>
-    <S.MessageFrom>
-      <S.MessageText ref={register({ required: true })} type="text"></S.MessageText>
-      <S.MessageSubmit type="submit"></S.MessageSubmit>
-    </S.MessageFrom>
-  </form>;
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <S.MessageFrom>
+        <S.MessageText ref={register({ required: true })} type="text"></S.MessageText>
+        <S.MessageSubmit type="submit"></S.MessageSubmit>
+      </S.MessageFrom>
+    </form>
+  );
 };
