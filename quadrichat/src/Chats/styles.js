@@ -40,3 +40,22 @@ export const Message = styled.li`
   width: 100%;
   justify-content: ${(props) => (props.isMine ? "flex-end" : "end")};
 `;
+
+export const MessageFrom = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-height: 50px;
+`;
+
+export const MessageText = styled.input`
+  width: 90%;
+  height: 50px;
+`;
+
+export const MessageSubmit = styled.input`
+  width: 10%;
+  height: 50px;
+`;

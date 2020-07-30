@@ -1,11 +1,13 @@
 import React from "react";
 
+import { MessageForm } from "./MessageForm";
+import { MessageList } from "./MessageList";
 import * as S from "./styles";
 
 export const Group = () => (
   <S.Wrapper>
     <S.ConversationName>Quadrilatere</S.ConversationName>
-    <S.MessageList>
+    <MessageList>
       <S.Message>
         <span>Nono: </span>
         Premier message
@@ -23,6 +25,7 @@ export const Group = () => (
         <span>Nono: </span>
         Sixieme message
       </S.Message>
-    </S.MessageList>
+    </MessageList>
+    <MessageForm />
   </S.Wrapper>
 );
