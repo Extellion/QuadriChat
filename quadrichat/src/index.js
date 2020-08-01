@@ -28,6 +28,9 @@ ReactDOM.render(
         <Route path="/chats/private/:id">
           <Private />
         </Route>
+        <Route exact path="/conversations/create">
+          <Create />
+        </Route>
         <Route path="/conversations">
           <List />
         </Route>
