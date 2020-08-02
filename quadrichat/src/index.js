@@ -7,6 +7,9 @@ import { App } from "./App";
 import { Login } from "./Auth/Login";
 import { Register } from "./Auth/Register";
 import { Group } from "./Chats/Group";
+import { Private } from "./Chats/Private";
+import { List } from "./Conversations/List";
+import { Create } from "./Conversations/Create";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
@@ -21,6 +24,15 @@ ReactDOM.render(
         </Route>
         <Route path="/chats/group/:id">
           <Group />
+        </Route>
+        <Route path="/chats/private/:id">
+          <Private />
+        </Route>
+        <Route exact path="/conversations/create">
+          <Create />
+        </Route>
+        <Route path="/conversations">
+          <List />
         </Route>
       </Switch>
     </Router>
