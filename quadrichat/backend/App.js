@@ -3,7 +3,7 @@ const app = express();
 const http = require("http").Server(app);
 const io = require("socket.io");
 
-const port = 500;
+const port = 3001;
 
 const socket = io(http);
 //create an event listener
@@ -16,4 +16,8 @@ socket.on("connection", (socket) => {
 //wire up the server to listen to our port 500
 http.listen(port, () => {
   console.log("connected to port: " + port);
+});
+
+app.get("/", (req, res) => {
+  res.send("<h1>Hello world</h1>");
 });
